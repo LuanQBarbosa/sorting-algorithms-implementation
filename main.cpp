@@ -33,6 +33,9 @@ int main( int argc, char** argv )
     case 3:
         selectionSort( A, nElem );
         break;
+    case 4:
+        insertionSort( A, nElem );
+        break;
     }
 
     std::cout << A[0];

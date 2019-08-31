@@ -8,4 +8,6 @@ void radixCount( long* A, long nElem, long n );
 
 void selectionSort( long* A, long nElem );
 
+void insertionSort( long* A, long nElem );
+
 #endif // ORDENACAO_H

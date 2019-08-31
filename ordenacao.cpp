@@ -73,3 +73,19 @@ void selectionSort( long* A, long nElem )
         }
     }
 }
+
+void insertionSort( long* A, long nElem )
+{
+    long i, j, elem;
+    for ( i = 1; i < nElem; i++ ) {
+        elem = A[i];
+        j = i - 1;
+
+        while( j >= 0 && A[j] > elem ) {
+            A[j+1] = A[j];
+            j--;
+        }
+
+        A[j+1] = elem;
+    }
+}
