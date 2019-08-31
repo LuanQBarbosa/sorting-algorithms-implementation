@@ -55,3 +55,21 @@ void radixCount( long* A, long nElem, long n )
         A[i] = B[i];
     }
 }
+
+void selectionSort( long* A, long nElem )
+{
+    long i, j;
+    for ( i = 0; i < nElem-1; i++ ) {
+        long minElem = i;
+        for ( j = i+1; j < nElem; j++ ) {
+            if ( A[j] < A[minElem] )
+                minElem = j;
+        }
+
+        if( minElem != i ) {
+            long aux = A[i];
+            A[i] = A[minElem];
+            A[minElem] = aux;
+        }
+    }
+}

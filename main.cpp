@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include<cstdlib>
+#include <cstdlib>
 #include "ordenacao.h"
 
 int main( int argc, char** argv )
@@ -29,6 +29,9 @@ int main( int argc, char** argv )
     
     case 2:
         radixSort( A, maxElem - minElem, nElem );
+        break;
+    case 3:
+        selectionSort( A, nElem );
         break;
     }
 
