@@ -11,3 +11,7 @@ And to run, after the name of the executable, it's necessary to put an integer r
 1 : Couting Sort
 
 2 : Radix Sort
+
+3 : Selection Sort
+
+4 : Insertion Sort
