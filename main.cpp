@@ -11,7 +11,7 @@ int main( int argc, char** argv )
     int nElem;
     file >> nElem;
 
-    long A[nElem], B[nElem], i = 0, maxElem = 0, minElem = 0;
+    long A[nElem], i = 0, maxElem = 0, minElem = 0;
     while ( file >> A[i] ) {
         if ( maxElem < A[i] )
             maxElem = A[i];
@@ -19,7 +19,7 @@ int main( int argc, char** argv )
             minElem = A[i];
 
         i++;
-    }    
+    }
 
     switch ( atoi( argv[1] ) )
     {
@@ -35,6 +35,9 @@ int main( int argc, char** argv )
         break;
     case 4:
         insertionSort( A, nElem );
+        break;
+    case 5:
+        mergeSort( A, 0, nElem-1 );
         break;
     }
 

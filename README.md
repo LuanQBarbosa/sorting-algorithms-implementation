@@ -15,3 +15,5 @@ And to run, after the name of the executable, it's necessary to put an integer r
 3 : Selection Sort
 
 4 : Insertion Sort
+
+5 : Merge Sort
