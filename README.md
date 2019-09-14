@@ -8,12 +8,14 @@ And to run, after the name of the executable, it's necessary to put an integer r
 ./main 1 test-files/couting.txt
 ```
 # Algorithms list
-1 : Couting Sort
+1 : CoutingSort
 
-2 : Radix Sort
+2 : RadixSort
 
-3 : Selection Sort
+3 : SelectionSort
 
-4 : Insertion Sort
+4 : InsertionSort
 
-5 : Merge Sort
+5 : MergeSort
+
+6 : QuickSort
