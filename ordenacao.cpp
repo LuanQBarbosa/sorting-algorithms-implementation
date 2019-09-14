@@ -90,12 +90,12 @@ void insertionSort( long* A, long nElem )
     }
 }
 
-void mergeSort( long *A, int l, int r )
+void mergeSort( long *A, long l, long r )
 {
     if ( l >= r )
         return;
 
-    int m = l + ( r - l ) / 2;
+    long m = l + ( r - l ) / 2;
 
     mergeSort( A, l, m );
     mergeSort( A, m+1, r );
@@ -103,13 +103,13 @@ void mergeSort( long *A, int l, int r )
     merge( A, l, m, r );
 }
 
-void merge( long *A, int l, int m, int r )
+void merge( long *A, long l, long m, long r )
 {
-    int i, j, k;
-    int nElemL = m - l + 1;
-    int nElemR = r - m;
+    long i, j, k;
+    long nElemL = m - l + 1;
+    long nElemR = r - m;
 
-    int left[nElemL], right[nElemR];
+    long left[nElemL], right[nElemR];
 
     for ( i = 0; i < nElemL; i++ )
         left[i] = A[l+i];
@@ -142,4 +142,37 @@ void merge( long *A, int l, int m, int r )
         j++;
         k++;
     }
+}
+
+void quickSort( long* A, long low, long high )
+{
+    if ( low >= high )
+        return;
+
+    long pi = partition( A, low, high );
+
+    quickSort( A, low, pi-1 );
+    quickSort( A, pi+1, high );
+}
+
+int partition( long* A, long low, long high )
+{
+    long pivot = A[high];
+    long i = low-1;
+
+    long aux;
+    for ( long j = low; j < high; j++ ) {
+        if ( A[j] < pivot ) {
+            i++;
+            aux = A[i];
+            A[i] = A[j];
+            A[j] = aux;
+        }
+    }
+
+    aux = A[i+1];
+    A[i+1] = A[high];
+    A[high] = aux;
+
+    return ( i + 1 );
 }

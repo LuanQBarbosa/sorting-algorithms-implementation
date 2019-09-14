@@ -10,7 +10,10 @@ void selectionSort( long* A, long nElem );
 
 void insertionSort( long* A, long nElem );
 
-void mergeSort( long* A, int l, int r );
-void merge( long* A, int l, int m, int r );
+void mergeSort( long* A, long l, long r );
+void merge( long* A, long l, long m, long r );
+
+void quickSort( long* A, long low, long high );
+int partition( long* A, long low, long high );
 
 #endif // ORDENACAO_H

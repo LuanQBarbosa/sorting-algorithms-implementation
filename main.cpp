@@ -8,7 +8,7 @@ int main( int argc, char** argv )
     std::fstream file;
     file.open( argv[2] );
 
-    int nElem;
+    long nElem;
     file >> nElem;
 
     long A[nElem], i = 0, maxElem = 0, minElem = 0;
@@ -37,7 +37,10 @@ int main( int argc, char** argv )
         insertionSort( A, nElem );
         break;
     case 5:
-        mergeSort( A, 0, nElem-1 );
+        mergeSort( A, 0l, nElem-1l );
+        break;
+    case 6:
+        quickSort( A, 0l, nElem-1l );
         break;
     }
 
